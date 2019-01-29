@@ -56,9 +56,9 @@ section {
     text-decoration: none;
     color: white;
     line-height: 1.5;
-    background-color: rgba(0, 0, 0, 0.6);
-    margin-top: 85%;
-    padding: 0.5em;
+    background-color: rgba(0,0,0,0.6);
+    margin-top: 75%;
+    padding: .5em;
     width: 100%;
   }
 }
@@ -86,6 +86,8 @@ section {
     height: 150px;
     padding-left: 5em;
     z-index: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
     img {
@@ -118,9 +120,10 @@ section {
       max-width: 50%;
     }
     p {
-      margin-top: 105%;
+        margin-top: 100%;
     }
-  }
+    
+  
 }
 
 @include desktop {

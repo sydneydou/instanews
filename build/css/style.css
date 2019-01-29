@@ -122,8 +122,8 @@ section {
     color: white;
     line-height: 1.5;
     background-color: rgba(0, 0, 0, 0.6);
-    margin-top: 85%;
-    padding: 0.5em;
+    margin-top: 75%;
+    padding: .5em;
     width: 100%; }
 
 @media (min-width: 600px) {
@@ -166,7 +166,7 @@ section {
     min-width: 50%;
     max-width: 50%; }
   .stories p {
-    margin-top: 105%; } }
+    margin-top: 100%; } }
 
 @media (min-width: 1000px) {
   .main {

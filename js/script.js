@@ -13,12 +13,14 @@
 $(function() {
   $("#drop-down").on("change", function() {
     const section = $(this).val();
-    // console.log(section);
+    console.log(section);
 
     //if value is empty, return
     //show loader
     //clear stories
-    $(.stories).empty();
+    $(".stories").empty();
+
+    $(".stories").addClass('loader');
     //make ajax request
 
     $.ajax({
@@ -36,12 +38,41 @@ $(function() {
       .done(function(data) {
         //steps 3 & 4
         //append all the things
-        console.log(data.results);
+        
 
 
         // 1. filter the data to only include 12 articles with images
-        if ()
-        // 2. create .each to run a function for each article in response.results
+     
+
+        const results= (data.results).filter(function(imgSearch){
+
+            return imgSearch.multimedia.length > 4;
+
+        }).slice(0,12);
+
+
+        
+        
+        console.log(results);
+          
+        $(".main").removeClass("main").addClass("mainAdd");
+
+        // 2. create .each to run a function for each article in data.results
+
+        $.each(results, function(key,value){
+
+
+            $(".stories").append(
+              
+              `<a href="${value.url}" style="background-image:url(${value.multimedia[4].url})"> 
+            
+                   <p> ${value.abstract} </p>
+
+              </a>` );
+            
+
+
+        });
         // 3. for each article - create constants for image URL, title and link
         // 4. make HTML string for the article using the constants just created
         // 5. append string to stories section
@@ -52,6 +83,9 @@ $(function() {
         //do stuff here if it doesnt work out
       })
       .always(function() {
+
+        $(".stories").removeClass('loader');
+
         //hide the loader
       });
   });

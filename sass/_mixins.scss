@@ -6,8 +6,10 @@
 @mixin tablet{
     @media (min-width: $tablet-width) {
       @content;
+      
     }
   }
+
 
 //mixin for desktop breakpoint
 

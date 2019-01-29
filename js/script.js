@@ -10,86 +10,64 @@
 // 5. If unsuccessful, append and show helpful error message to the user in the UI
 // 6. Hide loader again
 
-$(function() {
-  $("#drop-down").on("change", function() {
+$(function () {
+  $("#drop-down").on("change", function () {
     const section = $(this).val();
     console.log(section);
 
-    //if value is empty, return
-    //show loader
-    //clear stories
+
     $(".stories").empty();
 
     $(".main").removeClass("main").addClass("mainAdd");
 
     $(".stories").append("<img class='loader' src='/images/ajax-loader.gif'>");
-    //make ajax request
 
+    //Make ajax request:
     $.ajax({
-      method: "GET",
+        method: "GET",
 
-      url:
-        "https://api.nytimes.com/svc/topstories/v2/" +
-        section +
-        ".json?api-key=G4Hh9bDJTFGbGm3KSPEJqqh6KqZf9GoA",
+        url: "https://api.nytimes.com/svc/topstories/v2/" +
+          section +
+          ".json?api-key=G4Hh9bDJTFGbGm3KSPEJqqh6KqZf9GoA",
 
-      dataType: "json"
-    })
-
-
-      .done(function(data) {
-        //steps 3 & 4
-        //append all the things
-        
+        dataType: "json"
+      })
 
 
-        // 1. filter the data to only include 12 articles with images
-     
+      .done(function (data) {
 
-        const results= (data.results).filter(function(imgSearch){
+        const results = (data.results).filter(function (imgSearch) {
 
-            return imgSearch.multimedia.length > 4;
+          return imgSearch.multimedia.length > 4;
 
-        }).slice(0,12);
+        }).slice(0, 12);
 
-
-        
-        
         console.log(results);
-          
-        // $(".main").removeClass("main").addClass("mainAdd");
 
-        // 2. create .each to run a function for each article in data.results
-
-        $.each(results, function(key,value){
+        $.each(results, function (key, value) {
 
 
-            $(".stories").append(
-              
-              `<a href="${value.url}" style="background-image:url(${value.multimedia[4].url})"> 
+          $(".stories").append(
+
+            `<a href="${value.url}" style="background-image:url(${value.multimedia[4].url})"> 
             
                    <p> ${value.abstract} </p>
 
-              </a>` );
-            
+              </a>`);
+
 
 
         });
-        // 3. for each article - create constants for image URL, title and link
-        // 4. make HTML string for the article using the constants just created
-        // 5. append string to stories section
 
-      
+
       })
-      .fail(function() {
-        //do stuff here if it doesnt work out
+      .fail(function () {
         $(".stories").append("<p> Sorry, there was an erroreith your request </p>");
       })
-      .always(function() {
 
+      .always(function () {
         $(".loader").hide();
 
-        //hide the loader
       });
   });
 });

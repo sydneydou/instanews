@@ -20,7 +20,9 @@ $(function() {
     //clear stories
     $(".stories").empty();
 
-    $(".stories").addClass('loader');
+    $(".main").removeClass("main").addClass("mainAdd");
+
+    $(".stories").append("<img class='loader' src='/images/ajax-loader.gif'>");
     //make ajax request
 
     $.ajax({
@@ -55,7 +57,7 @@ $(function() {
         
         console.log(results);
           
-        $(".main").removeClass("main").addClass("mainAdd");
+        // $(".main").removeClass("main").addClass("mainAdd");
 
         // 2. create .each to run a function for each article in data.results
 
@@ -81,10 +83,11 @@ $(function() {
       })
       .fail(function() {
         //do stuff here if it doesnt work out
+        $(".stories").append("<p> Sorry, there was an erroreith your request </p>");
       })
       .always(function() {
 
-        $(".stories").removeClass('loader');
+        $(".loader").hide();
 
         //hide the loader
       });

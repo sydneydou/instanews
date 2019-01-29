@@ -57,7 +57,10 @@ body {
   font-weight: 300; }
 
 .loader {
-  background-image: url(images/ajax-loader.gif); }
+  height: 60px;
+  width: 60px;
+  margin: 0 auto;
+  margin-top: 10%; }
 
 section {
   display: -webkit-box;
@@ -80,17 +83,18 @@ section {
   padding-top: 35%; }
   .main .options {
     padding-top: 1.5em;
-    font-size: 14px; }
+    font-size: 14px;
+    line-height: 2; }
 
 .mainAdd {
-  height: 150px;
-  padding-left: 2em; }
+  height: 300px;
+  padding-top: 35px; }
   .mainAdd img {
-    max-width: 4em; }
+    max-width: 9em; }
   .mainAdd .options {
-    padding-left: 5em;
-    padding-top: 3em;
-    line-height: 1.5; }
+    font-size: 13px;
+    padding-top: 3e;
+    padding-top: .8em; }
   .mainAdd select {
     width: 10em;
     height: 2.5em; }
@@ -118,8 +122,8 @@ section {
     color: white;
     line-height: 1.5;
     background-color: rgba(0, 0, 0, 0.6);
-    margin-top: 65%;
-    padding: .5em;
+    margin-top: 85%;
+    padding: 0.5em;
     width: 100%; }
 
 @media (min-width: 600px) {
@@ -127,20 +131,42 @@ section {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
-            flex-flow: row; }
+            flex-flow: row;
+    padding-top: 15%; }
     .main img {
       max-width: 10em;
       padding-left: 2em;
       margin-left: 5em; }
     .main .options {
-      padding-left: 8%;
-      padding-top: 5%;
+      padding-top: 10%;
+      padding-left: 2em;
       line-height: 2; }
+  .mainAdd {
+    height: 150px;
+    padding-left: 5em;
+    z-index: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .mainAdd img {
+      max-width: 5em;
+      padding-bottom: 2.5em; }
+    .mainAdd .options {
+      padding-left: 5em;
+      line-height: 1.5;
+      padding-top: 0;
+      padding-bottom: 10px; }
+      .mainAdd .options h2 {
+        line-height: 3;
+        font-size: 16px; }
+    .mainAdd select {
+      width: 10em;
+      height: 2.5em; }
   .stories a {
     min-width: 50%;
     max-width: 50%; }
   .stories p {
-    margin-top: 80%; } }
+    margin-top: 105%; } }
 
 @media (min-width: 1000px) {
   .main {
@@ -148,17 +174,24 @@ section {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
-            flex-flow: row; }
+            flex-flow: row;
+    padding-bottom: 200px; }
     .main .options {
       padding-left: 8%;
       padding-top: 5%;
       line-height: 2; }
+      .main .options #drop-down {
+        height: 18%;
+        width: 105%; }
+    .main img {
+      max-width: 30%;
+      margin-left: 0; }
   .stories a {
     max-width: 25%;
     min-width: 25%; }
   .stories p {
     margin-top: 90%;
-    padding: .5em; }
+    padding: 0.5em; }
   .mainAdd {
     height: 150px;
     padding-left: 2em;
@@ -166,14 +199,28 @@ section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+    .mainAdd img {
+      max-width: 5em;
+      padding-bottom: 2.5em; }
     .mainAdd .options {
       padding-left: 5em;
-      padding-top: 3em;
-      line-height: 1.5; }
+      line-height: 1.5;
+      padding-top: 0;
+      padding-bottom: 10px; }
+      .mainAdd .options h2 {
+        line-height: 3;
+        font-size: 16px; }
     .mainAdd select {
       width: 10em;
       height: 2.5em; } }
 
 .copyright {
-  color: #c2c2c2;
-  padding-top: 16em; }
+  color: #c2c2c2; }
+  .copyright h2 {
+    padding-bottom: 2.5em;
+    padding-top: 2em;
+    font-size: 14px; }
+
+@media (min-width: 1000px) {
+  .copyright {
+    padding-right: 80%; } }

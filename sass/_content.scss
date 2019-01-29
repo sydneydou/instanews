@@ -1,167 +1,189 @@
-
-
-section{
-    display:flex;
-    flex-flow:column nowrap;
-    text-align:center;
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
 }
-.main{
-    display:flex;
-    flex-flow:column;
-    padding-top:35%;
-    
-    .options{
-        padding-top:1.5em;
-        font-size:14px;
-    }
-}
+.main {
+  display: flex;
+  flex-flow: column;
+  padding-top: 35%;
 
-
-
-.mainAdd{
-    height:150px;
-    padding-left: 2em;
-
-    img{
-        max-width:4em;
-    }
-
-    .options{
-        padding-left: 5em;
-        padding-top: 3em;
-        line-height: 1.5;
-
-    }
-
-    select{
-        width: 10em;
-        height: 2.5em;
-    }
+  .options {
+    padding-top: 1.5em;
+    font-size: 14px;
+    line-height: 2;
+  }
 }
 
+.mainAdd {
+  height: 300px;
+  padding-top: 35px;
+  
 
+  img {
+    max-width: 9em;
+  }
 
-.stories{
-   
-    display:flex;
-    flex-wrap:wrap;
+  .options {
+    font-size: 13px;
+    padding-top: 3e;
+    padding-top: .8em;
+  }
 
-    a{
-    
-        min-width: 100%;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        max-width: 100%;
-        height: 450px;
-        background-size: cover;
-        background-position: center;
-        text-decoration:none;
-        display:flex;
-
-        }
-
-
-    p{
-        text-decoration: none;
-        color: white;
-        line-height: 1.5;
-        background-color: rgba(0,0,0,0.6);
-        margin-top: 65%;
-        padding: .5em;
-        width: 100%;
-    }
-        
-        
-    
+  select {
+    width: 10em;
+    height: 2.5em;
+  }
 }
 
-@include tablet{
+.stories {
+  display: flex;
+  flex-wrap: wrap;
+
+  a {
+    min-width: 100%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-width: 100%;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    display: flex;
+  }
+
+  p {
+    text-decoration: none;
+    color: white;
+    line-height: 1.5;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 85%;
+    padding: 0.5em;
+    width: 100%;
+  }
+}
+
+@include tablet {
+  .main {
+    flex-flow: row;
+    padding-top:15%;
+
+    img {
+      max-width: 10em;
+      padding-left: 2em;
+      margin-left: 5em;
+    }
+
+    .options {
+        padding-top: 10%;
+        padding-left: 2em;
+        line-height: 2;
+    }
+  }
+
+ 
+  .mainAdd {
+    height: 150px;
+    padding-left: 5em;
+    z-index: 3;
+    display: flex;
+
+    img {
+      max-width:5em;
+      padding-bottom:2.5em;
+    }
+
+    .options {
+      padding-left: 5em;
+      line-height: 1.5;
+      padding-top:0;
+      padding-bottom:10px;
+
+      h2{
+        line-height: 3;
+        font-size:16px;
+      }
+    }
+
+    select {
+      width: 10em;
+      height: 2.5em;
+    }
+  }
 
 
-    .main{
-       
-        flex-flow: row;
-        
+  .stories {
+    a {
+      min-width: 50%;
+      max-width: 50%;
+    }
+    p {
+      margin-top: 105%;
+    }
+  }
+}
+
+@include desktop {
+  .main {
+    padding-top: 20%;
+    flex-flow: row;
+    padding-bottom: 200px;
+
+        .options {
+            padding-left: 8%;
+            padding-top: 5%;
+            line-height: 2;
+
+            #drop-down{
+                height: 18%;
+                width: 105%;
+            }
+         }
+
         img{
-            max-width: 10em;
-            padding-left: 2em;
-            margin-left: 5em;
-        }
-
-        .options{
-            padding-left: 8%;
-            padding-top: 5%;
-            line-height: 2;
-        }
-        
+            max-width:30%;
+            margin-left: 0;
+         }
     }
 
-    .stories{
+  .stories {
+    a {
+      max-width: 25%;
+      min-width: 25%;
+    }
 
-      a{
-
-        min-width:50%;
-        max-width:50%;
-      }
-      p{
-          margin-top:80%;
-      }
-
+    p {
+      margin-top: 90%;
+      padding: 0.5em;
     }
   }
 
-  @include desktop{
-
-
-    .main{
-        padding-top: 20%;
-        flex-flow: row;
-
-        .options{
-            padding-left: 8%;
-            padding-top: 5%;
-            line-height: 2;
-        }
-        
-    }
-   
-
-    .stories{
-
-      a{
-
-        max-width: 25%;
-        min-width: 25%;
-      }
-
-      p{
-        margin-top: 90%;
-        padding: .5em;
-      }
-
-    }
-
-
-.mainAdd{
-    height:150px;
+  .mainAdd {
+    height: 150px;
     padding-left: 2em;
-    z-index:3;
-    display:flex;
+    z-index: 3;
+    display: flex;
 
-    img{
-        // max-width:4em;
+    img {
+      max-width:5em;
+      padding-bottom:2.5em;
     }
 
-    .options{
-        padding-left: 5em;
-        padding-top: 3em;
-        line-height: 1.5;
+    .options {
+      padding-left: 5em;
+      line-height: 1.5;
+      padding-top:0;
+      padding-bottom:10px;
 
+      h2{
+        line-height: 3;
+        font-size:16px;
+      }
     }
 
-    select{
-        width: 10em;
-        height: 2.5em;
+    select {
+      width: 10em;
+      height: 2.5em;
     }
-}
   }
+}

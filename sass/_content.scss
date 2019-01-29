@@ -36,6 +36,8 @@ section {
   }
 }
 
+
+
 .stories {
   display: flex;
   flex-wrap: wrap;
@@ -52,7 +54,16 @@ section {
     display: flex;
   }
 
-  p {
+//   p {
+//     text-decoration: none;
+//     color: white;
+//     line-height: 1.5;
+//     background-color: rgba(0,0,0,0.6);
+//     margin-top: 75%;
+//     padding: .5em;
+//     width: 100%;
+//   }
+  .abstract{
     text-decoration: none;
     color: white;
     line-height: 1.5;
@@ -60,7 +71,11 @@ section {
     margin-top: 75%;
     padding: .5em;
     width: 100%;
+    align-content:flex-end;
+    align-items:bottom;
+    height:38%;
   }
+
 }
 
 @include tablet {

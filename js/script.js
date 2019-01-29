@@ -22,7 +22,7 @@ $(function() {
 
     $(".main").removeClass("main").addClass("mainAdd");
 
-    $(".stories").append("<img class='loader' src='/images/ajax-loader.gif'>");
+    $(".stories").append("<img class='loader' src='../images/ajax-loader.gif'>");
     //make ajax request
 
     $.ajax({
@@ -66,7 +66,7 @@ $(function() {
 
             $(".stories").append(
               
-              `<a href="${value.url}" style="background-image:url(${value.multimedia[4].url})"> 
+              `<a href="${value.url}" class="abstract" style="background-image:url(${value.multimedia[4].url})"> 
             
                    <p> ${value.abstract} </p>
 

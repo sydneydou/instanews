@@ -52,13 +52,9 @@ $(function () {
 
           $(".stories").append(
 
-<<<<<<< HEAD
             $(".stories").append(
               
-              `<a href="${value.url}" class="abstract" style="background-image:url(${value.multimedia[4].url})"> 
-=======
-            "<a target='_blank' href="${value.url}" style="background-image:url(${value.multimedia[4].url})"> 
->>>>>>> 023b4efa0c8f7c9604a02f9a550fdcdf2c755d78
+              `<a href="${value.url}" target="_blank" class="abstract" style="background-image:url(${value.multimedia[4].url})"> 
             
                    <p> ${value.abstract} </p>
 

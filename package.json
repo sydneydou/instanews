@@ -8,7 +8,7 @@
   },
   "author": "Sydney",
   "license": "ISC",
-  "repository":"https://github.com/sydneydou/instanews",
+  "repository": "https://github.com/sydneydou/instanews",
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "eslint": "^5.12.1",

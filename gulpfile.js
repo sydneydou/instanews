@@ -9,6 +9,16 @@ const terser = require("gulp-terser");
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
 const prettyError = require("gulp-prettyerror");
+const gulp = require('gulp');
+const babel = require('gulp-babel');
+ 
+gulp.task('default', () =>
+    gulp.src('src/app.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(gulp.dest('dist'))
+);
 
 gulp.task("scripts", function() {
   return gulp

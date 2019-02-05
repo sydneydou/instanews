@@ -46,18 +46,16 @@ $(function () {
 
         console.log(results);
 
-        $.each(results, function (key, value) {
+        $.each(results, (key, value) => {
 
 
-          $(".stories").append(
+        
 
-<<<<<<< HEAD
             $(".stories").append(
               
               `<a href="${value.url}" class="abstract" style="background-image:url(${value.multimedia[4].url})"> 
-=======
-            `<a href="${value.url}" style="background-image:url(${value.multimedia[4].url})"> 
->>>>>>> 023b4efa0c8f7c9604a02f9a550fdcdf2c755d78
+
+         
             
                    <p> ${value.abstract} </p>
 
@@ -69,11 +67,11 @@ $(function () {
 
 
       })
-      .fail(function () {
-        $(".stories").append("<p> Sorry, there was an erroreith your request </p>");
+      .fail( () => {
+        $(".stories").append("<p> Sorry, there was an error with your request </p>");
       })
 
-      .always(function () {
+      .always( () => {
         $(".loader").hide();
 
       });

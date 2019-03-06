@@ -10,6 +10,10 @@
 // 5. If unsuccessful, append and show helpful error message to the user in the UI
 // 6. Hide loader again
 
+import "../sass/style.scss";
+import $ from "jquery";
+
+
 $(function () {
   $("#drop-down").on("change", function () {
     const section = $(this).val();
@@ -21,7 +25,7 @@ $(function () {
     $(".main").removeClass("main").addClass("mainAdd");
 
 
-    $(".stories").append("<img class='loader' src='/images/ajax-loader.gif'>");
+    $(".stories").append("<img class='loader' src='images/ajax-loader.gif'>");
 
 
     //Make ajax request:

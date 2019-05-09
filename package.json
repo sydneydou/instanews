@@ -25,6 +25,7 @@
     "webpack": "^4.29.2"
   },
   "dependencies": {
+    "gulp": "^4.0.2",
     "jquery": "^3.3.1"
   }
 }
